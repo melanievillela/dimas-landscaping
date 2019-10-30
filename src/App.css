@@ -29,7 +29,7 @@ h2 {
 .hero-container p {
     color: #1a1a1a;
     top: 50px;
-    margin: 0 10vw;
+    margin: 0 25px;
     padding: 25px;
     font-size: 1.5em;
     line-height: 2;
@@ -40,6 +40,10 @@ h2 {
     min-width: 50%;
     height: 100%;
     background-image: url('./Images/garden-mower.jpg');
+}
+
+.icon {
+    max-width: 50%;    
 }
 
 .navbar {
@@ -75,19 +79,29 @@ h2 {
     padding-right: 25px;
 }
 
-.services li {
-    padding: 25px;
-    margin: 20px;
-    width: 25%;
+.service {
+    width: 250px;
+    height: 400px;
     background-color: #90BB23;
-    display: inline-block;
+    margin: 0 50px 50px 50px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
 }
 
-.services ul {
+.service p {
+    margin: 15px;
+}
+
+.services {
     flex-wrap: wrap;
-    padding: 0;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.services h2 {
+    width: 100%;
 }
 
 ul {

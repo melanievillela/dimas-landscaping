@@ -1,12 +1,46 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
+import Services from './Components/Services';
 
 class App extends Component {
 
 	state = {
-		services : ["Lawn Mowing", "Weed Control", "Bush Trimming", "Tree Trimming", "Stump Removal", "Fertilization", "Gravel Walkways",
-		"Landscape Design", "Fencing Installation", "Drainage Installation", "Sprinkler Installation", "Power Washing"			
+		services : [
+			{name: "Lawn Mowing",
+			icon: "mower.png",
+			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+			},
+			{name: "Weed Control",
+			icon: "grass.png",
+			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+			},
+			{name: "Bush Trimming",
+			icon: "bush.png",
+			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+			},
+			{name: "Tree Trimming",
+			icon: "trees.png",
+			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+			},
+			/*
+			{name: "Stump Removal",
+			icon: ""},
+			{name: "Fertilization",
+			icon: ""},
+			{name: "Gravel Walkways",
+			icon: ""},
+			{name: "Landscape Design",
+			icon: ""},
+			{name: "Fencing Installation",
+			icon: ""},
+			{name: "Drainage Installation",
+			icon: ""},
+			{name: "Sprinkler Installation",
+			icon: ""},
+			{name: "Power Washing",
+			icon: ""},
+			*/		
 		]
 	}
 
@@ -26,13 +60,17 @@ class App extends Component {
 						<p>Give your lawn the attention it deserves and schedule a consultation with us today.</p>
 					</div>
 				</div>	
-				<div className="services">
+				<div className="services flex">
 					<h2>Services</h2>
-					<ul className="flex">
-						{services.map((service, index) =>
-						<li key={index}>{service}</li>
-						)}
-					</ul>
+					{services.map((service, index) =>
+						<Services
+							key={index}
+							name={service.name}
+							icon={service.icon}
+							description={service.description}
+						>
+						</Services>							
+					)}
 				</div>		
 			</div>
 		);
