@@ -30,3 +30,9 @@ const services = [
     icon: "sketch.png",
     },					
 ]
+
+let serviceDiv=document.getElementById("services");
+
+services.forEach(service => {
+    
+});
