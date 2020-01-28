@@ -1,3 +1,5 @@
+//Loop and display service cards
+
 const services = [			
     {name: "Lawn Mowing",
     icon: "mower.png",
@@ -16,7 +18,13 @@ const services = [
     },
     {name: "Brick & Stone Walkways",
     icon: "brick.png",
-    },       
+    },   
+    {name: "Gutter Cleaning",
+    icon: "blower.png",
+    },  
+    {name: "Roof Cleaning",
+    icon: "roof.png",
+    },      
     {name: "Power Washing",
     icon: "hose.png",
     },     
@@ -31,8 +39,27 @@ const services = [
     },					
 ]
 
-let serviceDiv=document.getElementById("services");
+const serviceDiv=document.getElementById("services");
 
 services.forEach(service => {
-    
+    let serviceCard=document.createElement("div");
+    serviceCard.className="flex service";
+    serviceCard.innerHTML=`<h2>${service.name}</h2><img src="./images/${service.icon}"></img>`
+    serviceDiv.appendChild(serviceCard);    
 });
+
+//Scroll button to top
+
+const scrollBtn = document.getElementById("scroll");
+
+window.onscroll = () => {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+}
+
+scrollBtn.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+})
