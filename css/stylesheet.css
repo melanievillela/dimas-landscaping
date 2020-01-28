@@ -84,6 +84,7 @@ button {
 
 #contact p {
     text-align: center;
+    padding: 15px;
 }
 
 .flex {
@@ -135,6 +136,16 @@ li {
     padding: 15px;
 }
 
+.mobile {
+    display: none;
+}
+
+#mobile-icon img {
+    width: 25px;
+    height: auto;
+    filter: invert();
+}
+
 nav {
     height: 75px;
     justify-content: space-between;
@@ -153,8 +164,8 @@ nav a:hover {
 #scroll {
     display: none;
     position: fixed;
-    right: 5px;
-    bottom: 5px;
+    right: 15px;
+    bottom: 15px;
     z-index: 99;
     margin: 0;
     background-color: #00EFFF;
@@ -195,4 +206,72 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .service {
+        min-width: 25%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .brand {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #about > div {
+        flex-direction: column;
+    }
+   
+    .bubbles {
+        height: auto;
+        width: 75vw;
+        border-radius: 0;
+    }
+
+    .bubbles-container {
+        min-height: 90%;
+        flex-direction: column;
+    }
+
+    .mobile {
+        display: block;
+        background: none;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+    }
+
+    nav:not(.mobile) ul {
+        display: none;
+    }
+
+    .mobile ul {
+        display: none;
+    }
+   
+    .service {
+        min-width: 75%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #about > div > p {
+        padding: 15px;
+    }
+
+    h1 {
+        max-width: 50vw;
+        text-align: center;
+    }
+
+    nav {
+        background: linear-gradient(rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0) 100%);
+    }
 }
