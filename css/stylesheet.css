@@ -140,10 +140,23 @@ li {
     display: none;
 }
 
+.mobile-show {
+    position: absolute;
+    display: flex !important;
+    justify-content: center;
+    min-width: 100vw;
+    right: -25px;
+    top: 50px;
+}
+
 #mobile-icon img {
     width: 25px;
     height: auto;
     filter: invert();
+}
+
+#mobile a {
+    font-size: 1.25em;
 }
 
 nav {
@@ -159,6 +172,25 @@ nav a {
 
 nav a:hover {
     color: #00EFFF;
+}
+
+#phone {
+    justify-content: center;
+    align-items: center;
+}
+
+#phone div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 15px;    
+}
+
+#phone a, #phone p {
+    margin: 15px;
+    color: #000000;
+    text-shadow: none;
 }
 
 #scroll {
@@ -231,12 +263,16 @@ ul {
    
     .bubbles {
         height: auto;
-        width: 75vw;
+        width: 80vw;
         border-radius: 0;
     }
 
+    .bubbles p {
+        padding: 7.5px;
+    }
+
     .bubbles-container {
-        min-height: 90%;
+        min-height: 60%;
         flex-direction: column;
     }
 
@@ -254,6 +290,14 @@ ul {
 
     .mobile ul {
         display: none;
+    }
+
+    #phone {
+        align-items: flex-end;
+    }
+
+    #phone a, #phone p {
+        margin: 5px;
     }
    
     .service {

@@ -1,5 +1,4 @@
 //Loop and display service cards
-
 const services = [			
     {name: "Lawn Mowing",
     icon: "mower.png",
@@ -49,7 +48,6 @@ services.forEach(service => {
 });
 
 //Scroll button to top
-
 const scrollBtn = document.getElementById("scroll");
 
 window.onscroll = () => {
@@ -61,5 +59,13 @@ window.onscroll = () => {
 }
 
 scrollBtn.addEventListener("click", () => {
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.documentElement.scrollTop = 0;
+})
+
+//Expand UL for Mobile Nav
+const mobileNavBtn = document.getElementById("mobile-icon");
+const mobileLinks = document.querySelector(".mobile").firstElementChild;
+
+mobileNavBtn.addEventListener("click", () => {
+    mobileLinks.classList.toggle("mobile-show");
 })
