@@ -37,7 +37,14 @@ body {
     font-size: 2em;
     color: white;
     text-shadow: 1px 1px 1px black;
-    margin: 0 0 0 25px;
+    margin: 0;
+    padding-bottom: 7.5px;
+}
+
+#brand-container {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 15px;
 }
 
 .bubbles {
@@ -105,13 +112,16 @@ header {
     background-size: cover;
 }
 
-h2, h3 {
+h1, h2, h3 {
     text-align: center;
+}
+
+h2, h3 {
     margin: 15px;
 }
 
 #home {
-    height: calc(100vh - 75px);
+    height: calc(100vh - 100px);
     flex-direction: column;
 }
 
@@ -133,7 +143,7 @@ label {
 }
 
 li {
-    padding: 15px;
+    padding: 10px;
 }
 
 .mobile {
@@ -146,7 +156,7 @@ li {
     justify-content: center;
     min-width: 100vw;
     right: -25px;
-    top: 50px;
+    top: 75px;
 }
 
 #mobile-icon img {
@@ -160,7 +170,7 @@ li {
 }
 
 nav {
-    height: 75px;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0) 100%);
@@ -175,22 +185,7 @@ nav a:hover {
 }
 
 #phone {
-    justify-content: center;
-    align-items: center;
-}
-
-#phone div {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 15px;    
-}
-
-#phone a, #phone p {
-    margin: 15px;
-    color: #000000;
-    text-shadow: none;
+    font-size: 1.5em;
 }
 
 #scroll {
@@ -248,7 +243,7 @@ ul {
 
 @media only screen and (max-width: 800px) {
     .brand {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 
     nav a {
@@ -272,7 +267,7 @@ ul {
     }
 
     .bubbles-container {
-        min-height: 60%;
+        min-height: 90%;
         flex-direction: column;
     }
 
@@ -293,13 +288,9 @@ ul {
     }
 
     #phone {
-        align-items: flex-end;
+        font-size: 1em;
     }
 
-    #phone a, #phone p {
-        margin: 5px;
-    }
-   
     .service {
         min-width: 75%;
     }
@@ -312,7 +303,6 @@ ul {
 
     h1 {
         max-width: 50vw;
-        text-align: center;
     }
 
     nav {
