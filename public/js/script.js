@@ -63,7 +63,7 @@ scrollBtn.addEventListener("click", () => {
 })
 
 //Expand UL for Mobile Nav
-const mobileNavBtn = document.getElementById("mobile-icon");
+const mobileNavBtn = document.getElementById("mobile-nav-icon");
 const mobileLinks = document.querySelector(".mobile").firstElementChild;
 
 mobileNavBtn.addEventListener("click", () => {

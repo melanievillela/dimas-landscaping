@@ -33,18 +33,26 @@ body {
 }
 
 .brand { 
-    font-family: 'Titan One', cursive;
+    font-family: 'Corben', cursive;
     font-size: 2em;
     color: white;
     text-shadow: 1px 1px 1px black;
     margin: 0;
     padding-bottom: 7.5px;
+    letter-spacing: 2px
 }
 
 #brand-container {
     flex-direction: column;
     text-align: center;
     margin-left: 15px;
+}
+
+#brand-container p {
+    margin: 0;
+    padding-bottom: 7.5px;
+    font-size: 1.25em;
+    font-weight: bold;
 }
 
 .bubbles {
@@ -150,6 +158,10 @@ li {
     display: none;
 }
 
+#mobile a {
+    font-size: 1.25em;
+}
+
 .mobile-show {
     position: absolute;
     display: flex !important;
@@ -159,21 +171,17 @@ li {
     top: 75px;
 }
 
-#mobile-icon img {
-    width: 25px;
+.mobile-icons {
+    width: 30px;
     height: auto;
     filter: invert();
-}
-
-#mobile a {
-    font-size: 1.25em;
 }
 
 nav {
     height: 100px;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0) 100%);
+    background-color: #FF9800;;
 }
 
 nav a {
@@ -181,11 +189,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #00EFFF;
-}
-
-#phone {
-    font-size: 1.5em;
+    color: #0067ff;
 }
 
 #scroll {
@@ -195,7 +199,7 @@ nav a:hover {
     bottom: 15px;
     z-index: 99;
     margin: 0;
-    background-color: #00EFFF;
+    background-color: #0067ff;
 }
 
 section {
@@ -243,7 +247,7 @@ ul {
 
 @media only screen and (max-width: 800px) {
     .brand {
-        font-size: 1.25em;
+        font-size: 1.5em;
     }
 
     nav a {
@@ -255,20 +259,32 @@ ul {
     #about > div {
         flex-direction: column;
     }
+
+    #brand-container p {
+        display: none;
+    }
    
     .bubbles {
         height: auto;
         width: 80vw;
         border-radius: 0;
+        background-color: transparent;
+        margin: 0;
     }
 
     .bubbles p {
-        padding: 7.5px;
+        padding: 5px;
+        color: black;
+        font-size: 1.5em;
     }
 
     .bubbles-container {
         min-height: 90%;
         flex-direction: column;
+    }
+
+    #home {
+        background-color: rgba(255, 255, 255, 0.5);
     }
 
     .mobile {
@@ -288,7 +304,12 @@ ul {
     }
 
     #phone {
-        font-size: 1em;
+        background-color: #0067ff;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        padding: 10px 25px 5px 25px;
+        border-radius: 12.5px 0 0 12.5px;
     }
 
     .service {
