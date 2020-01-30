@@ -224,7 +224,7 @@ section {
 }
 
 .service img {
-    max-width: 50%;
+    width: 100%;
     height: auto;
     margin: 15px;
 }
@@ -237,12 +237,6 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-@media only screen and (max-width: 1000px) {
-    .service {
-        min-width: 25%;
-    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -312,9 +306,6 @@ ul {
         border-radius: 12.5px 0 0 12.5px;
     }
 
-    .service {
-        min-width: 75%;
-    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -324,9 +315,5 @@ ul {
 
     h1 {
         max-width: 50vw;
-    }
-
-    nav {
-        background: linear-gradient(rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0) 100%);
     }
 }
