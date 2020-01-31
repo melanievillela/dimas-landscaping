@@ -268,12 +268,13 @@ ul {
 
     .bubbles p {
         padding: 5px;
+        margin: 5px;
         color: black;
         font-size: 1.5em;
     }
 
     .bubbles-container {
-        min-height: 90%;
+        min-height: 80%;
         flex-direction: column;
     }
 
@@ -315,5 +316,9 @@ ul {
 
     h1 {
         max-width: 50vw;
+    }
+
+    .mobile-show {
+        top: 135px;
     }
 }
